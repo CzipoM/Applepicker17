@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject applePrefab;
+
+    public float speed = 1f;
+
+    public float leftAndRightEdge = 20f;
+
+    public float chanceToChangeDirections = 0.1f;
+
+    public float secondsBetweenAppleDrops = 1f;
+
+    void Start(){
+        
+    }
+
+    void Update(){
+        
+    }
 }

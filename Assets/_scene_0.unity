@@ -108,6 +108,27 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &399593782 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1437322311371802, guid: 0fc793592e195ba48a6086b42ef3625e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1969189089}
+--- !u!114 &399593783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399593782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5952e225f0bc24da1e7fe488665b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 0}
+  speed: 1
+  leftAndRightEdge: 10
+  chanceToChangeDirections: 0.1
+  secondsBetweenAppleDrops: 1
 --- !u!1 &1509832213
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,8 +253,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -275,7 +296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4019373844429268, guid: 0fc793592e195ba48a6086b42ef3625e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4019373844429268, guid: 0fc793592e195ba48a6086b42ef3625e, type: 2}
       propertyPath: m_LocalPosition.z
