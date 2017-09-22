@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Basket : MonoBehaviour {
-	
+    public GUIText scoreGT;
 	
 	void Update () {
         Vector3 mousePos2D = Input.mousePosition;
@@ -17,6 +17,13 @@ public class Basket : MonoBehaviour {
         this.transform.position = pos;
 	}
 
+    void Start()
+    {
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreGT = scoreGO.GetComponent<GUIText>();
+        scoreGT.text = "0";
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         GameObject collidedWith = coll.gameObject;
@@ -25,5 +32,8 @@ public class Basket : MonoBehaviour {
         {
             Destroy(collidedWith);
         }
+        int score = int.Parse(scoreGT.text);
+        score += 100;
+        scoreGT.text = score.ToString();
     }
 }
