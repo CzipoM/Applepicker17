@@ -10,12 +10,18 @@ public class AppleTree : MonoBehaviour {
 
     public float leftAndRightEdge = 20f;
 
-    public float chanceToChangeDirections = 0.02f;
+    public float chanceToChangeDirections = 0.1f;
 
     public float secondsBetweenAppleDrops = 1f;
 
     void Start(){
-        
+        InvokeRepeating("DropApple", 2f, secondsBetweenAppleDrops);
+    }
+
+    void DropApple()
+    {
+        GameObject apple = Instantiate(applePrefab) as GameObject;
+        apple.transform.position = transform.position;
     }
 
     void Update(){
