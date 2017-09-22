@@ -209,6 +209,11 @@ Prefab:
       propertyPath: m_Name
       value: ScoreCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 114122212583758476, guid: 1e3e9759ff4db5245a0a79e4f269a4b7,
+        type: 2}
+      propertyPath: m_Text
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e3e9759ff4db5245a0a79e4f269a4b7, type: 2}
   m_IsPrefabParent: 0
@@ -282,7 +287,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Score: 1000'
+  m_Text: 1000
 --- !u!222 &205259093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -577,6 +582,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!1 &1821231307
 GameObject:
   m_ObjectHideFlags: 0
