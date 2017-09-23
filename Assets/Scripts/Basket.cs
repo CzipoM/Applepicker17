@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Basket : MonoBehaviour {
-    public GUIText scoreGT;
-    public int score;
+    public Text scoreGT;
+    private int score;
 	
 	void Update () {
         Vector3 mousePos2D = Input.mousePosition;
@@ -22,8 +22,8 @@ public class Basket : MonoBehaviour {
     void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
-        scoreGT = scoreGO.GetComponent<GUIText>();
-        scoreGT.text = "0";
+        scoreGT = scoreGO.GetComponent<Text>();
+        scoreGT.text = "Score: 0";
     }
 
     void OnCollisionEnter(Collision coll)
@@ -35,11 +35,11 @@ public class Basket : MonoBehaviour {
             Destroy(collidedWith);
 
         }
-        int score = int.Parse(scoreGT.text);
+        //int score = int.Parse(scoreGT.text);
         score += 100;
-        scoreGT.text = score.ToString();
+        scoreGT.text = "Score: " + score.ToString();
 
-        if(score> HighScore.score)
+        if(score > HighScore.score)
         {
             HighScore.score = score;
         }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour {
 
-    static public int score = 10000;
+    static public int score = 1000;
 
     void Awake()
     {
@@ -17,7 +17,7 @@ public class HighScore : MonoBehaviour {
     }
 
     void Update () {
-        GUIText gt = this.GetComponent<GUIText>();
+        Text gt = GetComponent<Text>();
         gt.text = "High Score: " + score;
         if(score > PlayerPrefs.GetInt("ApplePickerHighScore"))
         {
